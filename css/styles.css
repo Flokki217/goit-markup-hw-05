@@ -4,6 +4,7 @@
   --tittle-color: #2e2f42;
   --accent-color: #4d5ae5;
   --white-color: #ffffff;
+  --for-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current-page::after {
   content: '';
@@ -100,6 +101,8 @@ body {
   position: relative;
 }
 .nav-list .link {
+  transition: color var(--for-animation);
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -133,6 +136,7 @@ body {
   margin-left: auto;
 }
 .feedback-list .link {
+  transition: color var(--for-animation);
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
@@ -175,6 +179,8 @@ body {
   margin-right: auto;
 }
 .hero .pointer {
+  transition: background-color var(--for-animation), transform 5000ms linear;
+
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   font-weight: 500;
@@ -195,6 +201,7 @@ body {
 .hero .pointer:focus {
   color: var(--white-color);
   background-color: var(--bright-color);
+  transform: rotate(360deg);
 }
 /* Skills */
 .skills-section {
@@ -322,6 +329,7 @@ body {
   margin-top: 8px;
 }
 .soc-link {
+  transition: background-color var(--for-animation);
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -365,6 +373,7 @@ body {
   height: 56px;
 }
 .customers-link {
+  transition: fill var(--for-animation), border-color var(--for-animation);
   width: 168px;
   height: 88px;
   align-items: center;
@@ -414,6 +423,7 @@ body {
   margin-left: 120px;
 }
 .footer-social .soc-link {
+  transition: background-color var(--for-animation);
   background: rgba(255, 255, 255, 0.1);
   color: #f4f4fd;
 }
@@ -450,6 +460,8 @@ body {
   border: 1px solid #e7e9fc;
 }
 .portfolio-buttons .btn {
+  transition: color var(--for-animation), background-color var(--for-animation),
+    box-shadow var(--for-animation), border-color var(--for-animation);
   border-radius: 4px;
   padding: 12px 24px;
   font-family: 'Roboto', sans-serif;
@@ -485,10 +497,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
+  position: relative;
 }
 
 .portfolio-list .item {
+  transition: box-shadow var(--for-animation);
   width: calc((100% - 48px) / 3);
+  position: relative;
 }
 .portfolio .item:hover,
 .portfolio .item:focus {
@@ -508,3 +523,14 @@ body {
 .portfolio .secondary-tittle {
   line-height: 1.2;
 }
+/* 
+.portfolio-list .overlay::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transform: translateY(100%);
+} */
