@@ -96,7 +96,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1) skewY(0);
   padding: 24px;
   transform-origin: center right;
   width: 408px;
@@ -108,8 +108,7 @@ body {
   transition: transform var(--for-animation);
 }
 .backdrop.is-hidden .modal-window {
-  transform: scale(0) translate(-50%, -50%) rotate(45deg);
-  transform-origin: center right;
+  transform: scale(2) skewY(30deg);
 }
 .close-svg {
   width: 8px;
