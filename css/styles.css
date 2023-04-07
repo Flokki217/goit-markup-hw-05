@@ -484,6 +484,8 @@ body {
 }
 .footer-social .soc-icon {
   fill: currentColor;
+  width: 24px;
+  height: 24px;
 }
 .footer-social .soc-link:hover,
 .footer-social .soc-link:focus {
@@ -502,7 +504,7 @@ body {
 }
 .footer-soc-list {
   display: flex;
-  gap: 24px;
+  gap: 16px;
 }
 
 /* -------------------Portfolio------------------------------------- */
